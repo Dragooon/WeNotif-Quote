@@ -1,6 +1,6 @@
 <?php
 /**
- * WeNotif-TopicReply's main plugin file
+ * WeNotif-Quote's main plugin file
  * Just as a note, this is fairly similar to WeNotif-TopicReply because I coped the entire file :P
  * 
  * @package Dragooon:WeNotif-Quote
