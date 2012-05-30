@@ -204,4 +204,17 @@ class QuoteNotifier implements Notifier
 	{
 		return true;
 	}
+
+	/**
+	 * Returns the title and description of the notifier for the profile area
+	 *
+	 * @access public
+	 * @return array(title, description)
+	 */
+	public function getProfileDesc()
+	{
+		global $txt;
+
+		return array($txt['notification_quote_profile'], $txt['notification_quote_profile_desc']);
+	}
 }

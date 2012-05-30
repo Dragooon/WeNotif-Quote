@@ -12,4 +12,6 @@
  */
 
 $txt['notification_quote'] = '%s quoted your post in "%s"';
+$txt['notification_quote_profile'] = 'Post Quotes';
+$txt['notification_quote_profile_desc'] = 'When enabled, you\'ll receive notifications when anyone quotes your post';
 ?>
