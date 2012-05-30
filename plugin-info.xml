@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plugin id="Dragooon:WeNotif-Quote">
+  <name>Notifications (Quote)</name>
+  <author email="mail@dragooon.net" url="http://smf-media.com/">Shitiz "Dragooon" Garg</author>
+  <description>Notifications extension for notifying the user if there's a quote of their post</description>
+  <version>1.0</version>
+
+  <hooks>
+    <function point="notification_callback" function="wenotif_quote_callback" filename="$plugindir/plugin" />
+    <function point="create_post_after" function="wenotif_quote_create_post_after" filename="$plugindir/plugin" />
+    <function point="display_main" function="wenotif_quote_display_main" filename="$plugindir/plugin" />
+  </hooks>
+</plugin>
