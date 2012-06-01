@@ -230,4 +230,19 @@ class QuoteNotifier implements Notifier
 	public function saveProfile($id_member, array $settings)
 	{
 	}
+
+	/**
+	 * E-mail handler
+	 *
+	 * @access public
+	 * @param Notification $notification
+	 * @param array $email_data Any additional e-mail data passed to Notification::issue function
+	 * @return array(subject, body)
+	 */
+	public function getEmail(Notification $notification, array $email_data)
+	{
+		global $txt;
+
+		return array($txt['notification_quote_email_subject'], $this->getText($notification));
+	}
 }
