@@ -198,9 +198,10 @@ class QuoteNotifier extends Notifier
 	 * @access public
 	 * @param Notification $notification
 	 * @param array &$data Reference to the new notification's data, if something needs to be altered
+	 * @param array &$email_data Email data passed to Notification::issue
 	 * @return bool, if false then a new notification is not created but the current one's time is updated
 	 */
-	public function handleMultiple(Notification $notification, array &$data)
+	public function handleMultiple(Notification $notification, array &$data, array &$email_data)
 	{
 		return true;
 	}
@@ -236,9 +237,10 @@ class QuoteNotifier extends Notifier
 	 *
 	 * @access public
 	 * @param Notification $notification
+	 * @param array $email_data
 	 * @return array(subject, body)
 	 */
-	public function getEmail(Notification $notification)
+	public function getEmail(Notification $notification, array $email_data)
 	{
 		global $txt;
 
