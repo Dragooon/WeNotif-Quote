@@ -134,7 +134,7 @@ function wenotif_quote_display_main()
 	Notification::markReadForNotifier($user_info['id'], WeNotif::getNotifiers('quote'), $topic);
 }
 
-class QuoteNotifier implements Notifier
+class QuoteNotifier extends Notifier
 {
 	/**
 	 * Constructor, loads the language file for some strings we use
@@ -236,10 +236,9 @@ class QuoteNotifier implements Notifier
 	 *
 	 * @access public
 	 * @param Notification $notification
-	 * @param array $email_data Any additional e-mail data passed to Notification::issue function
 	 * @return array(subject, body)
 	 */
-	public function getEmail(Notification $notification, array $email_data)
+	public function getEmail(Notification $notification)
 	{
 		global $txt;
 
